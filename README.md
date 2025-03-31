@@ -20,4 +20,4 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 
 ## Lista de projetos
 
-1. [Pomodoro Timer](./projetos/rp-pico-pomodoro/README.md)
+1. [Pomodoro Timer](./projetos/pomodoro_timer/README.md)
