@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Pomodoro Timer
-permalink: /pomodoro/
 ---
 
 Autor: José Augusto Alves de Moraes
@@ -77,8 +76,8 @@ In VS Code select the "Compile Pico Project" option inside the commands' menu, y
 <p>
     <img src="./assets/funcionamento_1.jpg"
          alt="Tela Inicial"
-         width=400>
+         width=390>
     <img src="./assets/funcionamento_2.jpg"
          alt="Tela de Configuração de Foco"
-         width=400>
+         width=390>
 </p>
