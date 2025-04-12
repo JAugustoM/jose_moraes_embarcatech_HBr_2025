@@ -21,3 +21,4 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 ## Lista de projetos
 
 1. [Pomodoro Timer](./projetos/pomodoro_timer/README.md)
+2. [Contador Decrescente](./projetos/contador_decrescente/README.md)
