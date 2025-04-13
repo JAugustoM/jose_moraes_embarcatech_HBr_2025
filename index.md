@@ -9,7 +9,7 @@ Curso: Residência Tecnológica em Sistemas Embarcados
 
 Instituição: EmbarcaTech - HBr
 
-Brasília, março de 2025
+Brasília, abril de 2025
 
 ---
 
@@ -25,3 +25,4 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 
 1. [Pomodoro Timer](./projetos/pomodoro_timer/pomodoro.md)
 2. [Contador Decrescente](./projetos/contador_decrescente/contador_decrescente.md)
+3. [Leitor Joystick](./projetos/leitura_joystick/leitura_joystick.md)
