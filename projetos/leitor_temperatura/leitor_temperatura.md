@@ -15,7 +15,7 @@ Brasília, abril de 2025
 
 ## Objetivos
 
-O objetivo deste projeto foi implementar a leitura da temperatura, em graus Celsius, do MCU da BitDogLab calculado utilizando a fórmula disponibilizada no manual da Pi Pico W que multiplica a voltagem interna do MCU multiplicado por um fator de conversão para determinar, aproximadamente, a temperatura do microcontrolador.
+O objetivo deste projeto foi implementar a leitura da temperatura, em graus Celsius, do MCU da BitDogLab calculado utilizando a fórmula disponibilizada no manual da Pi Pico W que multiplica a voltagem interna do MCU por um fator de conversão para determinar, aproximadamente, a temperatura do microcontrolador.
 
 ---
 
