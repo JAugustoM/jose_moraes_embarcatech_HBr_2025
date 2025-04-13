@@ -26,3 +26,4 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 1. [Pomodoro Timer](./projetos/pomodoro_timer/pomodoro.md)
 2. [Contador Decrescente](./projetos/contador_decrescente/contador_decrescente.md)
 3. [Leitor Joystick](./projetos/leitura_joystick/leitura_joystick.md)
+4. [Leitor de Temperatura do MCU](./projetos/leitor_temperatura/leitor_temperatura.md)
