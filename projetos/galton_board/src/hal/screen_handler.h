@@ -8,6 +8,6 @@ extern char texto[8][22];
 
 extern void setup_display_oled();
 extern void draw_screen(char text[8][22]);
-extern void update_line(char text[22], int line);
+extern void update_line(char *text, int line, int start_column);
 
 #endif

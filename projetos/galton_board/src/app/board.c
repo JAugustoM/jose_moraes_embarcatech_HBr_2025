@@ -8,14 +8,14 @@
 #include <string.h>
 
 int piles[9] = {0};
+int count = 0;
 List *list;
 
 const uint8_t MAX_LEFT = 1;
 const uint8_t MAX_RIGHT = 19;
 
 char INIT_STATE[8][22] = {
-    // Primeira linha de pinos | * * * * * * * * * |
-    "|--------- ---------|", "|         *         |", "|        * *        |",
+    "|                   |", "|         *         |", "|        * *        |",
     "|       * * *       |", "|      * * * *      |", "|     * * * * *     |",
     "|    * * * * * *    |", "|   * * * * * * *   |",
     // 3 5 7 9 11 13 15 17
@@ -74,11 +74,13 @@ Ball *create_ball() {
       list->last = ball;
     }
 
+    count++;
+
     char text[22];
-    strcpy(text, INIT_STATE[ball->pos_y]);
+    snprintf(text, 22, "|               %4d|", count);
 
     text[ball->pos_x] = 'o';
-    update_line(text, ball->pos_y);
+    update_line(text, ball->pos_y, 0);
 
     return ball;
   }
@@ -91,10 +93,15 @@ Ball *remove_ball(Ball *ball) {
   list->first = next_ball;
 
   int pile = (ball->pos_x / 2) - 1;
-  if (pile < 9)
+  if (pile < 8)
     piles[pile]++;
 
-  printf("%d\n", ball->pos_x);
+  printf("[");
+
+  for (int i = 0; i < 8; i++)
+    printf(" %d ", piles[i]);
+
+  printf("]\n");
 
   free(ball);
   return next_ball;
@@ -104,7 +111,7 @@ void tick() {
   Ball *ball = list->first;
 
   while (ball != NULL) {
-    update_line(INIT_STATE[ball->pos_y], ball->pos_y);
+    update_line(INIT_STATE[ball->pos_y], ball->pos_y, 0);
     ball->pos_y++;
 
     char text[22];
@@ -115,7 +122,7 @@ void tick() {
     } else {
       coll(ball);
       text[ball->pos_x] = 'o';
-      update_line(text, ball->pos_y);
+      update_line(text, ball->pos_y, 0);
       ball = ball->next_ball;
     }
   }

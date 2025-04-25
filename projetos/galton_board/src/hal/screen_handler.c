@@ -48,8 +48,9 @@ void draw_screen(char text[8][22]) {
   render_on_display(ssd, &frame_area);
 }
 
-void update_line(char text[22], int line) {
+void update_line(char *text, int line, int start_column) {
   int y = 8 * line;
+  int x = 6 * start_column;
   ssd1306_draw_string(ssd, 0, y, text);
   render_on_display(ssd, &frame_area);
 }
