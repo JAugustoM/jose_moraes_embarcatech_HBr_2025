@@ -76,12 +76,6 @@ Ball *create_ball() {
 
     count++;
 
-    char text[22];
-    snprintf(text, 22, "|               %4d|", count);
-
-    text[ball->pos_x] = 'o';
-    update_line(text, ball->pos_y, 0);
-
     return ball;
   }
 
@@ -93,8 +87,11 @@ Ball *remove_ball(Ball *ball) {
   list->first = next_ball;
 
   int pile = (ball->pos_x / 2) - 1;
-  if (pile < 8)
-    piles[pile]++;
+
+  piles[pile]++;
+
+  if (piles[8] < piles[pile])
+    piles[8]++;
 
   printf("[");
 
@@ -111,19 +108,30 @@ void tick() {
   Ball *ball = list->first;
 
   while (ball != NULL) {
-    update_line(INIT_STATE[ball->pos_y], ball->pos_y, 0);
     ball->pos_y++;
-
-    char text[22];
-    strcpy(text, INIT_STATE[ball->pos_y]);
 
     if (ball->pos_y == 8) {
       ball = remove_ball(ball);
     } else {
       coll(ball);
-      text[ball->pos_x] = 'o';
-      update_line(text, ball->pos_y, 0);
       ball = ball->next_ball;
     }
   }
+}
+
+void draw_board() {
+  char text[8][22];
+  snprintf(text[0], 22, "|               %4d|", count);
+
+  for (int i = 1; i < 8; i++)
+    strcpy(text[i], INIT_STATE[i]);
+
+  Ball *ball = list->first;
+
+  while (ball != NULL) {
+    text[ball->pos_y][ball->pos_x] = 'o';
+    ball = ball->next_ball;
+  }
+
+  draw_screen(text);
 }

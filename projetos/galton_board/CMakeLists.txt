@@ -37,7 +37,9 @@ pico_sdk_init()
 
 add_executable(galton_board src/galton_board.c
                             src/app/board.c
+                            src/app/hist.c
                             src/hal/screen_handler.c
+                            src/hal/button_handler.c
                             src/drivers/ssd1306_i2c.c
                             src/drivers/cp437.c)
 
@@ -51,8 +53,10 @@ pico_enable_stdio_usb(galton_board 1)
 # Add the standard library to the build
 target_link_libraries(galton_board
         pico_stdlib
+        pico_time
         pico_rand
-        hardware_i2c)
+        hardware_i2c
+        hardware_gpio)
 
 # Add the standard include files to the build
 target_include_directories(galton_board PRIVATE
@@ -61,7 +65,6 @@ target_include_directories(galton_board PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(galton_board
-
         )
 
 pico_add_extra_outputs(galton_board)

@@ -27,5 +27,6 @@ extern List *create_list();
 extern Ball *create_ball();
 extern Ball *remove_ball(Ball *ball);
 extern void tick();
+extern void draw_board();
 
 #endif
