@@ -28,36 +28,36 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(leitor_temperatura C CXX ASM)
+project(teste_unitario C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(leitor_temperatura src/leitor_temperatura.c )
+add_executable(teste_unitario app/teste_unitario.c
+                              hal/leitor_temperatura.c)
 
-pico_set_program_name(leitor_temperatura "leitor_temperatura")
-pico_set_program_version(leitor_temperatura "0.1")
+pico_set_program_name(teste_unitario "teste_unitario")
+pico_set_program_version(teste_unitario "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(leitor_temperatura 0)
-pico_enable_stdio_usb(leitor_temperatura 1)
+pico_enable_stdio_uart(teste_unitario 0)
+pico_enable_stdio_usb(teste_unitario 1)
 
 # Add the standard library to the build
-target_link_libraries(leitor_temperatura
-        pico_stdlib
-        hardware_adc)
+target_link_libraries(teste_unitario
+        pico_stdlib)
 
 # Add the standard include files to the build
-target_include_directories(leitor_temperatura PRIVATE
+target_include_directories(teste_unitario PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(leitor_temperatura
-
+target_link_libraries(teste_unitario
+        hardware_adc
         )
 
-pico_add_extra_outputs(leitor_temperatura)
+pico_add_extra_outputs(teste_unitario)
 
