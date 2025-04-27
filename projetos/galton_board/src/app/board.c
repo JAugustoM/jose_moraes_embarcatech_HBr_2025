@@ -93,13 +93,6 @@ Ball *remove_ball(Ball *ball) {
   if (piles[8] < piles[pile])
     piles[8]++;
 
-  printf("[");
-
-  for (int i = 0; i < 8; i++)
-    printf(" %d ", piles[i]);
-
-  printf("]\n");
-
   free(ball);
   return next_ball;
 }
