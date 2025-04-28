@@ -1,4 +1,4 @@
-# Leitor de Temperatura do MCU
+# Código Estruturado
 
 Autor: José Augusto Alves de Moraes
 
@@ -12,15 +12,11 @@ Brasília, abril de 2025
 
 ## Objetivos
 
-O objetivo deste projeto foi implementar a leitura da temperatura, em graus Celsius, do MCU da BitDogLab calculado utilizando a fórmula disponibilizada no manual da Pi Pico W que multiplica a voltagem interna do MCU por um fator de conversão para determinar, aproximadamente, a temperatura do microcontrolador.
-
----
+O principal objetivo deste projeto foi aplicar boas práticas de organização de código, criando um projeto simples. O código em si apenas faz o led da Pico W ascender e desligar em períodos de 1 e 1 segundo.
 
 ## Componentes Utilizados
 
-Para o desenvolvimento deste projeto não foram usados quaisquer componentes da BitDogLab além do microcontrolador, especificamente o conversor ADC da Pico W para obter a voltagem consumida pelo microcontrolador.
-
----
+Para o desenvolvimento deste projeto foi usada exclusivamente o led integrado da Pico W.
 
 ## Utilização
 
