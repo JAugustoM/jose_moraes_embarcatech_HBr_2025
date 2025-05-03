@@ -37,7 +37,7 @@ pico_sdk_init()
 
 add_executable(estrutura_codigo app/estrutura_codigo.c
                                 drivers/led_embutido.c
-                                hal/hal_led.c )
+                                hal/hal_led.c)
 
 pico_set_program_name(estrutura_codigo "estrutura_codigo")
 pico_set_program_version(estrutura_codigo "0.1")
@@ -57,8 +57,7 @@ target_include_directories(estrutura_codigo PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(estrutura_codigo
-        pico_cyw43_arch_none
-        )
+        pico_cyw43_arch_none)
 
 pico_add_extra_outputs(estrutura_codigo)
 
