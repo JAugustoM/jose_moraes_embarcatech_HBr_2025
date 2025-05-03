@@ -34,10 +34,10 @@ Para o desenvolvimento deste projeto não foram usados quaisquer componentes da 
 
 ### Como Compilar e Executar
 
-Dentro do VS Code, selecione a opção "Compile Pico Project" usando o menu de comandos, Ctrl+Shift+P por padrão para abrir o menu, para compilar o projeto. Após compilado, conecte a placa em modo Bootsel, pressionando o botão Bootsel enquanto conecta a placa no computador feito isso passe o arquivo pomodoro.elf para a placa usando a ferramenta picotool load da Pico C SDK ou passe o arquivo manualmente usando um gestor de arquivos, ou o terminal.
+Para compilar o projeto e executar o teste unitario use o seguinte comando:
 
-Alternativamente, o projeto pode ser compilado com o seguinte comando:
+`cmake -S . -B build -G Ninja -D TARGET_GROUP=test && ninja -C build`
 
-`cmake -S . -B build -G Ninja && ninja -C build`
+Após executar o comando basta passar o arquivo para a placa, com o seguinte a seguir e depois observar utilizando algum monitor serial.
 
-Após executar o comando basta passar o arquivo para a placa, como explicado anteriormente.
+`sudo picotool load build/src/test/tests.elf`
