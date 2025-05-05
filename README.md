@@ -31,3 +31,7 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 3. [Leitor de Temperatura do MCU](./projetos/leitor_temperatura/README.md)
 4. [Código Estruturado](./projetos/estrutura_codigo/README.md)
 5. [Teste Unitário](./projetos/teste_unitario/README.md)
+
+### Projetos da Segunda Fase - Maio
+
+1. [Galton Board](./projetos/galton_board/README.md)

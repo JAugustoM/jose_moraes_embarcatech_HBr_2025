@@ -38,6 +38,6 @@ Para compilar o projeto e executar o teste unitario use o seguinte comando:
 
 `cmake -S . -B build -G Ninja -D TARGET_GROUP=test && ninja -C build`
 
-Após executar o comando basta passar o arquivo para a placa, com o seguinte a seguir e depois observar utilizando algum monitor serial.
+Após compilar o projeto basta passar o arquivo para a placa com o comando a seguir e depois observar o resultado dos testes utilizando algum monitor serial, como o minicom ou o PuTTy.
 
 `sudo picotool load build/src/test/tests.elf`

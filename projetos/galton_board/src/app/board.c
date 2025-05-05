@@ -9,6 +9,8 @@
 
 int piles[9] = {0};
 int count = 0;
+uint8_t random_count = 0;
+int64_t random_number = 0;
 List *list;
 
 const uint8_t MAX_LEFT = 1;
@@ -33,7 +35,14 @@ Dir coll(Ball *ball) {
     return left;
   }
 
-  Dir dir = get_rand_32() % 2;
+  if (!random_count) {
+    random_number = get_rand_64();
+    random_count = 64;
+  }
+
+  Dir dir = random_number & 0x1;
+  random_count--;
+  random_number >>= 1;
 
   if (dir == left)
     ball->pos_x--;
@@ -61,7 +70,6 @@ Ball *create_ball() {
   if (ball != NULL) {
     ball->pos_x = 10;
     ball->pos_y = 0;
-    ball->falling = true;
     ball->next_ball = NULL;
 
     if (list->first == NULL) {

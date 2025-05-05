@@ -9,7 +9,6 @@ typedef enum dir { left, right } Dir;
 typedef struct ball {
   uint8_t pos_x;
   uint8_t pos_y;
-  bool falling;
   struct ball *next_ball;
 } Ball;
 

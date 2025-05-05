@@ -32,7 +32,7 @@ int main() {
         draw_board();
       else
         draw_hist();
-      sleep_ms(1000);
+      sleep_ms(100);
     }
   }
 }
