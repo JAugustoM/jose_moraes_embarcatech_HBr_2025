@@ -1,6 +1,6 @@
 #include "button_handler.h"
-#include "../app/hist.h"
 #include "hardware/gpio.h"
+#include "hist.h"
 
 const uint BUTTON_A = 5;
 const uint BUTTON_B = 6;

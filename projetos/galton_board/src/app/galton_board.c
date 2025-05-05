@@ -1,8 +1,8 @@
-#include "app/board.h"
-#include "app/hist.h"
-#include "hal/button_handler.h"
-#include "hal/screen_handler.h"
+#include "board.h"
+#include "button_handler.h"
+#include "hist.h"
 #include "pico/stdio.h"
+#include "screen_handler.h"
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>

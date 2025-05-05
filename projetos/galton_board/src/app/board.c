@@ -1,6 +1,6 @@
 #include "board.h"
-#include "../hal/screen_handler.h"
 #include "pico/rand.h"
+#include "screen_handler.h"
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>

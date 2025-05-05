@@ -1,8 +1,8 @@
 #ifndef SCREEN_HANDLER_H
 #define SCREEN_HANDLER_H
 
-#include "../drivers/ssd1306.h"
 #include "pico/stdlib.h"
+#include "ssd1306.h"
 
 extern char texto[8][22];
 

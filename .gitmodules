@@ -1,3 +1,6 @@
 [submodule "projetos/teste_unitario/Unity"]
 	path = projetos/teste_unitario/Unity
 	url = https://github.com/ThrowTheSwitch/Unity.git
+[submodule "projetos/galton_board/src/Unity"]
+	path = projetos/galton_board/src/Unity
+	url = https://github.com/ThrowTheSwitch/Unity.git

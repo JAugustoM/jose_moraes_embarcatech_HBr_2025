@@ -1,6 +1,6 @@
 #include "hist.h"
-#include "../hal/screen_handler.h"
 #include "board.h"
+#include "screen_handler.h"
 #include <math.h>
 #include <stdio.h>
 
