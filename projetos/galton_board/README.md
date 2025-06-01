@@ -42,4 +42,4 @@ Para compilar o projeto é possível utilizar a extensão da Pico C SDK ou o ter
 
 Após compilar o projeto basta passar o arquivo para a placa com o comando a seguir:
 
-`sudo picotool load build/src/test/tests.elf`
+`sudo picotool load build/src/app/galton_board.elf`
