@@ -56,4 +56,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-mise.local.toml
+.direnv
+flake.lock
